@@ -16,3 +16,25 @@ Technology:
 ## Who
 
 ## How
+
+
+## Tech Stack
+
+    * React
+    * React DOM
+    * React Router Dom
+    * Zustand
+    * Formik
+    * Storybook
+    * Bit
+    * LibreOffice Draw
+    * HTML
+    * CSS
+    * Sass
+    * JavaScript
+    * TypeScript
+    * Axios
+    * React Responsive
+    * @React-Hook/Media Query
+    * React Device Detect
+    
