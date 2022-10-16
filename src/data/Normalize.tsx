@@ -1,25 +1,4 @@
-export const centerPage: React.CSSProperties = {
-  display: "flex",
-  margin: "0 auto"
-}
-
-export const containerWrapperStyles: React.CSSProperties = {
-  display: "flex",
-  position: "relative",
-  background: "white",
-  border: "1px solid black",
-  padding: "2rem",
-  margin: "1rem",
-  borderRadius: "0.5rem",
-  fontFamily: "Arial",
-}
-
-export const buttonWrapperStyles: React.CSSProperties = {
-  display: "flex",
-  margin: "1rem",
-}
-
-export const Normalize: string = `
+export const normalize = `
 *,
 ::before,
 ::after {
