@@ -1,11 +1,8 @@
 import { FormEvent, useState } from "react"
-import { AccountForm } from './AccountForm';
-//import { AccountForm } from "./AccountForm"
+import { AccountForm } from "./AccountForm"
 import { AddressForm } from "./AddressForm"
 import { useMultistepForm } from "./useMultistepForm"
 import { UserForm } from "./UserForm"
-import "./modern-normalize.css";
-import "./skeleton.css";
 
 type FormData = {
   firstName: string
@@ -31,7 +28,8 @@ const INITIAL_DATA: FormData = {
   password: "",
 }
 
-const [data, setData] = useState(INITIAL_DATA)
+function App() {
+  const [data, setData] = useState(INITIAL_DATA)
   function updateFields(fields: Partial<FormData>) {
     setData(prev => {
       return { ...prev, ...fields }
