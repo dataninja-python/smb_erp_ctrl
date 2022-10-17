@@ -1,7 +1,3 @@
-import React from "react"
-import './assets/norm.css'
-//import './assets/base.css'
-
 import { FormEvent, useState } from "react"
 import { AccountForm } from "./AccountForm"
 import { AddressForm } from "./AddressForm"
@@ -32,7 +28,7 @@ const INITIAL_DATA: FormData = {
   password: "",
 }
 
-function App() {
+function FormPage() {
   const [data, setData] = useState(INITIAL_DATA)
   function updateFields(fields: Partial<FormData>) {
     setData(prev => {
@@ -53,14 +49,31 @@ function App() {
   }
 
   return (
-    <div className="container grid">
+    <div
+      style={{
+        position: "relative",
+        background: "white",
+        border: "1px solid black",
+        padding: "2rem",
+        margin: "1rem",
+        borderRadius: ".5rem",
+        fontFamily: "Arial",
+        maxWidth: "max-content",
+      }}
+    >
       <form onSubmit={onSubmit}>
-        <div className="row">
-          <div className="twelve columns"></div>
-            <div className="one column">{currentStepIndex + 1} / {steps.length}</div>
+        <div style={{ position: "absolute", top: ".5rem", right: ".5rem" }}>
+          {currentStepIndex + 1} / {steps.length}
         </div>
         {step}
-        <div>
+        <div
+          style={{
+            marginTop: "1rem",
+            display: "flex",
+            gap: ".5rem",
+            justifyContent: "flex-end",
+          }}
+        >
           {!isFirstStep && (
             <button type="button" onClick={back}>
               Back
@@ -73,4 +86,4 @@ function App() {
   )
 }
 
-export default App
+export default FormPage
